@@ -3,7 +3,7 @@ import { useRef } from "react";
 const Input = (props) => {
   const inputBox=useRef();
   const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" &&(inputBox.current.value !=='')) {
       event.preventDefault(); // Prevent form submission
       props.handler(inputBox.current.value);
       inputBox.current.value = "";
@@ -20,9 +20,9 @@ const Input = (props) => {
       />
       <button
         className="text-headingColor"
-        onClick={() => {
+        onClick={() => { if(inputBox.current.value !=''){
           props.handler(inputBox.current.value);
-          inputBox.current.value = "";
+          inputBox.current.value = "";}
         }}>
         <FaPlusCircle size={30} />
       </button>

@@ -22,7 +22,7 @@ const Body = ()=>{
    settoDo([...toDo,{item}]);
   }
     return (
-      <div className=" mx-auto my-6  border border-inherit rounded-lg bg-btntextColor min-h-[600px] max-w-[600px]">
+      <div className=" mx-auto my-4  border border-inherit rounded-lg bg-btntextColor min-h-[600px] max-w-[600px]">
         <Input handler={addToDoHandler} />
         <List data={toDo} remove={removeToDo} />
       </div>
