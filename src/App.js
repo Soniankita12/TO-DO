@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./Component/Header";
+import Body from "./Component/Body";
 const App = () => {
   return (
-    <div>
-      <h1 className="text-   xl font-bold underline">hiii react</h1>
+    <div className="bg-bgColor h-screen">
+      <Header/>
+      <Body/>
     </div>
   );
 };
